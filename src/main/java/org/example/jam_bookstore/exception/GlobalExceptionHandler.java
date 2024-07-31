@@ -1,2 +1,5 @@
-package org.example.jam_bookstore.exception;public class GlobalExceptionHandler {
+package org.example.jam_bookstore.exception;
+
+public class GlobalExceptionHandler {
+
 }
