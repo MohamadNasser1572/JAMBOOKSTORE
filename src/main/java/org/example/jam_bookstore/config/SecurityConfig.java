@@ -21,5 +21,7 @@ public class SecurityConfig {
                 .and()
                 .csrf(csrf -> csrf.ignoringRequestMatchers("/**"));
         return http.build();
+
     }
+
 }
