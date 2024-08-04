@@ -52,4 +52,9 @@ public class BookController {
         bookService.deleteBook(id);
         return "redirect:/books";
     }
+
+    @GetMapping("/")
+    public String home() {
+        return "index"; // Return the name of your view template (e.g., index.html)
+    }
 }
