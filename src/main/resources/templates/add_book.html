@@ -2,22 +2,38 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Add New Book</title>
+    <style>
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            padding: 20px;
+        }
+        form {
+            width: 100%;
+            max-width: 600px; /* Adjust width as needed */
+        }
+    </style>
 </head>
 <body>
-<h1>Add New Book</h1>
-<form th:action="@{/books}" th:object="${book}" method="post">
-    <label for="title">Title:</label>
-    <input type="text" id="title" name="title" required />
+<div class="form-container">
+    <h1>Add New Book</h1>
+    <form th:action="@{/books}" th:object="${book}" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required />
+        <br />
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required />
+        <br />
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required />
+        <br />
+        <button type="submit">Add Book</button>
+    </form>
     <br />
-    <label for="author">Author:</label>
-    <input type="text" id="author" name="author" required />
-    <br />
-    <label for="price">Price:</label>
-    <input type="number" id="price" name="price" step="0.01" required />
-    <br />
-    <button type="submit">Add Book</button>
-</form>
-<br />
-<a href="/books">Back to List</a>
+    <a href="/books">Back to List</a>
+</div>
 </body>
 </html>
