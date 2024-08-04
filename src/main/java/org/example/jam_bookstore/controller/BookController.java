@@ -57,4 +57,11 @@ public class BookController {
     public String home() {
         return "index"; // Return the name of your view template (e.g., index.html)
     }
+
+    @PostMapping("/{id}")
+    public String updateBook(@PathVariable Long id, @ModelAttribute Book book) {
+        book.setId(id);
+        bookService.saveBook(book);
+        return "redirect:/books";
+    }
 }
