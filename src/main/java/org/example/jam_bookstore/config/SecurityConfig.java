@@ -19,7 +19,7 @@ public class SecurityConfig {
                 .authorizeRequests()
                 .anyRequest().permitAll()
                 .and()
-                .csrf(csrf -> csrf.ignoringRequestMatchers("/**"));
+                .csrf(csrf -> csrf.disable());
         return http.build();
 
     }
