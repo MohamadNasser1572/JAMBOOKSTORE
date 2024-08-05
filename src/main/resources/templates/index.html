@@ -2,9 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Home</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1, p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome to JAM Bookstore</h1>
-<p><a href="/books">Go to Book List</a></p>
+<div>
+    <h1>Welcome to JAM Bookstore</h1>
+    <p><a href="/books">Go to Book List</a></p>
+</div>
 </body>
 </html>
